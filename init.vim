@@ -59,7 +59,7 @@ set foldmethod=marker
 command T NERDTree
 
 " set global theme
-silent! colorscheme monokai
+silent! colorscheme dracula
 
 " Set the theme for vim-airline
 autocmd VimEnter * AirlineTheme powerlineish
