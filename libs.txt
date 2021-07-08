@@ -1,0 +1,5 @@
+fzf
+neovim
+tmux
+bash-completion
+silversearcher-ag
