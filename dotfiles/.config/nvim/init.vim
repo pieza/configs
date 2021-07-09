@@ -1,6 +1,6 @@
 call plug#begin("~/.vim/plugged")
   " Theme
-  Plug 'dracula/vim'
+  Plug 'joshdick/onedark.vim' 
 
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -10,8 +10,17 @@ call plug#begin("~/.vim/plugged")
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   
-  " C# highlight
+  " React highlight
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
+
+
+  " C# Highlight
   Plug 'neovim/nvim.net'
+  
+  " React highlight
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 
   " File Explorer with Icons
   Plug 'scrooloose/nerdtree'
@@ -28,14 +37,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
-" Enable theming support
-" if (has("termguicolors"))
-"  set termguicolors
-" endif
-
 " Theme
-syntax enable
-silent! colorscheme dracula
+syntax on
+colorscheme onedark 
+set termguicolors
 
 " Display the row numbers (line number)
 set relativenumber
@@ -59,8 +64,10 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
+
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
@@ -70,6 +77,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
+
 " requires silversearcher-ag
 " used to ignore gitignore files
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
