@@ -14,7 +14,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
 
-
   " C# Highlight
   Plug 'neovim/nvim.net'
   
@@ -35,6 +34,9 @@ call plug#begin("~/.vim/plugged")
 
   " AutoComplete
   Plug 'Valloric/YouCompleteMe'
+
+  " Ez movement through code
+  Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Theme
@@ -60,10 +62,34 @@ set incsearch
 " For some reason the mouse isn't enabled by default anymore...
 set mouse=a
 
+" Enable clipboard
+set clipboard=unnamedplus
+
+" Display commands
+set showcmd
+
+" Show line number
+set ruler
+
+" Text encoding
+set encoding=utf-8
+
+" mark correspondig brackets
+set showmatch
+
+" Ident code
+set sw=2
+
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
+
+" Key for easy motion
+let mapleader=" "
+nmap <Leader>f <Plug>(easymotion-s2)
+nmap <Leader>x :x<CR>
+nmap <Leader>q :q!<CR>
 
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -93,6 +119,7 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
+
 tnoremap <C-l> <C-\><C-n><C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
