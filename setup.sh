@@ -1,15 +1,17 @@
 #!/bin/bash
 set -e
 
-package_manager=${1:-'brew'}
-install_cmd=${2:-'install'}
+# remove original files
+rm -f ~/.vim
+rm -f ~/.vimrc
+rm -f ~/.bashrc
+rm -f ~/.config/nvim/init.vim
 
-cat libs.txt | \
-while read lib; do
-  echo sudo $package_manager $install_cmd $lib -y
-done
+# create symlinks
+ln -s .vim ~/.vim
+ln -s .vimrc ~/.vimrc
+ln -s .bashrc ~/.bashrc
+ln -s .nvim/init.vim ~/.config/nvim/init.vim
 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
+# install plugins
 nvim +PlugInstall

@@ -1,5 +1,5 @@
-fzf
 neovim
+fzf
 tmux
 bash-completion
 silversearcher-ag
