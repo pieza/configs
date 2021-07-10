@@ -2,7 +2,7 @@
 set -e
 
 # remove original files
-rm -f ~/.vim
+rm -rf ~/.vim
 rm -f ~/.vimrc
 rm -f ~/.bashrc
 rm -f ~/.config/nvim/init.vim
