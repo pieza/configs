@@ -20,6 +20,9 @@ call plug#begin("~/.vim/plugged")
   " React highlight
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
+  
+  " HMTL autocomplete with emmet                                                
+  Plug 'mattn/emmet-vim'
 
   " File Explorer with Icons
   Plug 'scrooloose/nerdtree'
