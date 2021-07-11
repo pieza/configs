@@ -1,19 +1,17 @@
-#!/bin/bash
+#/bin/bash
 set -e
 
 # remove original files
-rm -rf ~/.vim
 rm -f ~/.vimrc
 rm -f ~/.bashrc
 rm -f ~/.tmux.conf
-rm -f ~/.config/nvim/init.vim
+rm -rf ~/.config/nvim
 
 # create symlinks
-ln -s .vim ~/.vim
-ln -s .vimrc ~/.vimrc
-ln -s .bashrc ~/.bashrc
-ln -s .tmux.conf ~/.tmux.conf
-ln -s .nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/configs/.vimrc ~/.vimrc
+ln -s ~/configs/.bashrc ~/.bashrc
+ln -s ~/configs/.tmux.conf ~/.tmux.conf
+ln -s ~/configs/nvim ~/.config/nvim
 
 # install plugins
 nvim +PlugInstall

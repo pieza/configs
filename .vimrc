@@ -1,8 +1,5 @@
 syntax on
 
-colorscheme onedark 
-set termguicolors
-
 " Display the row numbers (line number)
 set relativenumber
 
