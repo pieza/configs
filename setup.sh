@@ -13,5 +13,8 @@ ln -s ~/configs/.bashrc ~/.bashrc
 ln -s ~/configs/.tmux.conf ~/.tmux.conf
 ln -s ~/configs/nvim ~/.config/nvim
 
+# reload .bashrc
+source ~/.bashrc
+
 # install plugins
 nvim +PlugInstall

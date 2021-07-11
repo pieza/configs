@@ -1,9 +1,9 @@
 " Key for easy motion
 let mapleader=" "
-nmap <Leader>f <Plug>(easymotion-s2)
+nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>x :x<CR>
 nmap <Leader>q :q!<CR>
-nmap <Leader>q :w<CR>
+nmap <Leader>w :w<CR>
 nmap <Leader>a vggG$ 
 
 nnoremap <C-z> u

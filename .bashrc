@@ -103,5 +103,6 @@ alias vi="nvim"
 alias vim="nvim"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/pieza/.sdkman"
-[[ -s "/home/pieza/.sdkman/bin/sdkman-init.sh" ]] && source "/home/pieza/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PROJECTS=$HOME/Documents/projects
