@@ -4,8 +4,9 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>x :x<CR>
 nmap <Leader>q :q!<CR>
 nmap <Leader>w :w<CR>
-nmap <Leader>a vggG$ 
+nmap <Leader>a ggvG$ 
 
+" Undo with ctrl + z
 nnoremap <C-z> u
 
 " Toggle
@@ -40,3 +41,36 @@ function! OpenTerminal()
   resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
+
+" goto definition
+nmap <silent> gd <Plug>(coc-definition)
+" goto type
+nmap <silent> gK <Plug>(coc-type-definition)
+" get references
+nmap <silent> gr <Plug>(coc-references)
+
+" format rename
+nmap <silent> fr <Plug>(coc-rename)
+
+" format file
+nmap <silent> ff <Plug>(coc-format)
+
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif

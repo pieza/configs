@@ -19,3 +19,6 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+
+" Trigger snippets
+let g:UltiSnipsExpandTrigger="<C-l>"

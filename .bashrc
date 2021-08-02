@@ -101,6 +101,8 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 alias vi="nvim"
 alias vim="nvim"
+alias mongor="sudo docker run --rm -p 27017:27017 --name mongo -d mongo"
+alias mongos="sudo docker stop mongo"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -118,3 +120,19 @@ fi
 
 # setting for pyenv-virtualenv
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/pieza/.pyenv/versions/miniconda3-latest/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/pieza/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh" ]; then
+        . "/home/pieza/.pyenv/versions/miniconda3-latest/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/pieza/.pyenv/versions/miniconda3-latest/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
