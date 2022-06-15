@@ -1,6 +1,6 @@
 call plug#begin("~/.vim/plugged")
   " Theme
-  Plug 'joshdick/onedark.vim' 
+  Plug 'haishanh/night-owl.vim'
 
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'} 
