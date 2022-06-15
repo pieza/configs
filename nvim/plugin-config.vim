@@ -1,6 +1,7 @@
 " Theme
-colorscheme onedark 
+colorscheme night-owl 
 set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
