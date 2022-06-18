@@ -12,7 +12,8 @@ nnoremap <C-z> u
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-o> :FZF<CR>
+nnoremap <C-f> :Ag<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
